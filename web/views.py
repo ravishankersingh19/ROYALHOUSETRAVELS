@@ -13,15 +13,15 @@ def about(request):
 
 
 def news(request):
-    return render (request,'news.html')
+    return render(request,'news.html')
 
 def contact(request):
-    return render ('contact.html')
+    return render(request,'contact.html')
 
 
 def destinations(request):
-    return render ('destinations.html')
+    return render(request,'destinations.html')
 
 
 def elements(request):
-    return render('elements.html')
+    return render(request,'elements.html')
