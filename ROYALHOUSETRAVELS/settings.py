@@ -25,7 +25,7 @@ SECRET_KEY = 'os6n6g(sze2jxb5sx507+mh#f2!zs+hg=@!_0z%#ih$#id*ec-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["royalhousetravels.com"]
+ALLOWED_HOSTS = ["royalhousetravels.com","https://royalhousetravels-e5ppj.ondigitalocean.app/"]
 
 
 # Application definition

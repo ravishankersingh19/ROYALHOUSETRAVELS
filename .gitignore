@@ -246,5 +246,5 @@ venv
 
 
 # Restricted upload Folder on git
-asset
-assets
+# asset
+# assets
