@@ -207,7 +207,8 @@ Thumbs.db
 # SageMath parsed files
 
 # Environments
-# .env
+.env
+venv
 
 # Spyder project settings
 
@@ -245,5 +246,5 @@ Thumbs.db
 
 
 # Restricted upload Folder on git
-
+asset
 assets
