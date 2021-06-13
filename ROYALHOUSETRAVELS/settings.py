@@ -25,7 +25,7 @@ SECRET_KEY = 'os6n6g(sze2jxb5sx507+mh#f2!zs+hg=@!_0z%#ih$#id*ec-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["royalhousetravels.com","royalhousetravels-e5ppj.ondigitalocean.app"]
+ALLOWED_HOSTS = ["royalhousetravels.com","www.royalhousetravels.com"]
 
 
 # Application definition
@@ -76,13 +76,24 @@ WSGI_APPLICATION = 'ROYALHOUSETRAVELS.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
+if not DEBUG:
+    DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME':  os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'royalhouse_db',
+        'USER': 'royalhouse_user',
+        'PASSWORD': 'DG^Bk@12Gy45dvhv',
+        'HOST': 'localhost',
+        'PORT': '',
+        }
+    }
 
 
 # Password validation
@@ -123,7 +134,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static'),
+    '/root/royalhousetravel/env/lib/python3.8/site-packages/jazzmin/static'
 ]
 
 MEDIA_URL = '/media/'
